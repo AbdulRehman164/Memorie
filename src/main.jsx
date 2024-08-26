@@ -5,6 +5,8 @@ import './index.css';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <App />
+        <div className="px-20">
+            <App />
+        </div>
     </StrictMode>,
 );
