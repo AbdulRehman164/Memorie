@@ -7,12 +7,17 @@ const Header = ({ clickedCards }) => {
         setHighScore(score);
     }
     return (
-        <div>
-            <h1>Memorie</h1>
-            <div>
-                <div>Score : {score}</div>
+        <div
+            className="flex justify-between font-mideival pt-2 bg-sky-950 text-white px-10"
+            style={{ fontFamily: 'MedievalSharp' }}
+        >
+            <h1 className="text-5xl font-extrabold">Memorie</h1>
+            <div className="font-extrabold text-xl">
+                <div>
+                    <div>Score : {score}</div>
+                </div>
+                <div>High Score : {highScore}</div>
             </div>
-            <div>High Score : {highScore}</div>
         </div>
     );
 };

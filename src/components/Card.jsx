@@ -19,7 +19,7 @@ const Card = ({
     return (
         <Tilt>
             <div
-                className="h-40 w-32 bg-gradient-to-r from-stone-900 to-stone-700 flex flex-col justify-center items-center rounded p-1"
+                className="h-40 w-32 bg-sky-950 flex flex-col justify-center items-center rounded "
                 onClick={(e) => {
                     setCards(randomize(cards));
                     let newClickedCards = [];
