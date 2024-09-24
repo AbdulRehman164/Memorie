@@ -3,9 +3,14 @@ import YouWon from './YouWon';
 
 const Header = ({ clickedCards, setClickedCards }) => {
     const score = clickedCards.length;
-    const [highScore, setHighScore] = useState(score);
+    const [highScore, setHighScore] = useState(
+        localStorage.getItem('highScore')
+            ? localStorage.getItem('highScore')
+            : score,
+    );
     if (score > highScore) {
         setHighScore(score);
+        localStorage.setItem('highScore', score);
     }
 
     return (
