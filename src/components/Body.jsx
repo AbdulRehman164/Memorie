@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from './Card';
 import randomize from './randomize';
 import GameOver from './GameOver';
+import Shimmer from './Shimmer';
 
 const Body = ({ clickedCards, setClickedCards }) => {
     const [cards, setCards] = useState(randomize([]));
@@ -19,7 +20,9 @@ const Body = ({ clickedCards, setClickedCards }) => {
         getData();
     }, []);
 
-    return (
+    return cards.length === 0 ? (
+        <Shimmer />
+    ) : (
         <div className="flex justify-center items-center">
             {isGameOver ? <GameOver setIsGameOver={setIsGameOver} /> : null}
 
