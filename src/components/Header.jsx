@@ -8,7 +8,7 @@ const Header = ({ clickedCards }) => {
     }
     return (
         <div
-            className="flex justify-between font-mideival pt-2 bg-sky-950 text-white px-10"
+            className="flex justify-between pt-2 bg-sky-950 text-white px-10"
             style={{ fontFamily: 'MedievalSharp' }}
         >
             <h1 className="text-5xl font-extrabold">Memorie</h1>

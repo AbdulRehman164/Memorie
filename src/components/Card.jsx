@@ -9,6 +9,7 @@ const Card = ({
     setCards,
     clickedCards,
     setClickedCards,
+    setIsGameOver,
 }) => {
     const handleClick = (node) => {
         node.style.transform = 'none';
@@ -25,6 +26,8 @@ const Card = ({
                     let newClickedCards = [];
                     if (!clickedCards.includes(id)) {
                         newClickedCards = [...clickedCards, id];
+                    } else {
+                        setIsGameOver(true);
                     }
                     setClickedCards(newClickedCards);
                     handleClick(e.currentTarget.parentNode);
