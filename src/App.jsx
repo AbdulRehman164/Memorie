@@ -6,7 +6,10 @@ function App() {
     const [clickedCards, setClickedCards] = useState([]);
     return (
         <div className="flex flex-col gap-20">
-            <Header clickedCards={clickedCards} />
+            <Header
+                clickedCards={clickedCards}
+                setClickedCards={setClickedCards}
+            />
             <Body
                 clickedCards={clickedCards}
                 setClickedCards={setClickedCards}
